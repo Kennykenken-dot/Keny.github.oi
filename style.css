@@ -1,0 +1,79 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: whitesmoke;
+  text-align: center;
+  position: relative; /* Allow absolute positioning within the body */
+}
+
+/* Question Styling */
+h2 {
+  font-size: 2em;
+  color: #e94d58;
+  margin: 15px 0;
+}
+
+/* Button Group Styling */
+.btn-group {
+  display: flex;
+  justify-content: space-between;  /* To place Yes and No on opposite sides */
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0;
+  position: relative;
+}
+
+/* Button Styling */
+button {
+  width: 45%;
+  height: 45px;
+  font-size: 1em;
+  background: #e94d58;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;  /* To make them aligned properly */
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .btn-group {
+    flex-direction: column;  /* Stack buttons vertically on smaller screens */
+    align-items: center;
+  }
+
+  button {
+    width: 100%;  /* Make buttons take full width on mobile */
+    margin-bottom: 10px;  /* Space between buttons */
+  }
+
+  button:active {
+    background: #d0424a; /* Active state for button press */
+  }
+
+  button:focus {
+    outline: 2px solid #e94d58; /* Focus state for accessibility */
+  }
+}
+
+/* No Button Styling - Positioned Absolutely for Movement */
+.noBtn {
+  position: absolute; /* This will allow it to move freely */
+}
